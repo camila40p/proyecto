@@ -12,6 +12,7 @@ import pyodbc;
 	varBool: bool = True; # bool(True);
 """
 
+# DTO, ENTIDAD...
 class Estados:
 	id: int = 0;
 
@@ -27,9 +28,25 @@ class Estados:
 	def SetNombre(self, value: str) -> None:
 		self.nombre = value;
 
+# REPOSITORIO
+class Repositorio:
+    strConnection: str = """
+        Driver={MySQL ODBC 9.0 Unicode Driver};
+        Server=localhost;
+        Database=db_personas;
+        PORT=3306;
+        user=user_ptyhon;
+        password=Clas3s1Nt2024_!""";
+
+    def ConexionBasica(self) -> None:  
+        conexion = pyodbc.connect(self.strConnection);
+
+
 estado = Estados();
 print(estado.GetNombre());
 
+repositorio = Repositorio();
+repositorio.ConexionBasica();
 
 """
 VERSION DE PYTHON
