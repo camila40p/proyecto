@@ -51,11 +51,33 @@ class Repositorio:
 		cursor.close();
 		conexion.close();
 
+	def ConexionBasica2(self) -> None:
+		conexion = pyodbc.connect(self.strConnection);
+
+		consulta: str = """SELECT * FROM estados""";
+		cursor = conexion.cursor();
+		cursor.execute(consulta);
+
+		lista: list = [];
+		for elemento in cursor:
+			entidad: Estados = Estados();
+			entidad.SetId(elemento[0]);
+			entidad.SetNombre(elemento[1]);
+			lista.append(entidad);
+
+		cursor.close();
+		conexion.close();
+
+		for estado in lista:
+			print(str(estado.GetId()) + ", " + estado.GetNombre());
+
+
 estado = Estados();
 print(estado.GetNombre());
 
 repositorio = Repositorio();
-repositorio.ConexionBasica();
+# repositorio.ConexionBasica();
+repositorio.ConexionBasica2();
 
 """
 VERSION DE PYTHON
