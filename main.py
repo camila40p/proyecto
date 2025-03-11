@@ -30,17 +30,26 @@ class Estados:
 
 # REPOSITORIO
 class Repositorio:
-    strConnection: str = """
-        Driver={MySQL ODBC 9.0 Unicode Driver};
-        Server=localhost;
-        Database=db_personas;
-        PORT=3306;
-        user=user_ptyhon;
-        password=Clas3s1Nt2024_!""";
+	strConnection: str = """
+		Driver={MySQL ODBC 9.0 Unicode Driver};
+		Server=localhost;
+		Database=db_personas;
+		PORT=3306;
+		user=user_ptyhon;
+		password=Clas3s1Nt2024_!""";
 
-    def ConexionBasica(self) -> None:  
-        conexion = pyodbc.connect(self.strConnection);
+	def ConexionBasica(self) -> None:
+		conexion = pyodbc.connect(self.strConnection);
 
+		consulta: str = """SELECT * FROM estados""";
+		cursor = conexion.cursor();
+		cursor.execute(consulta);
+
+		for elemento in cursor:
+			print(elemento);
+
+		cursor.close();
+		conexion.close();
 
 estado = Estados();
 print(estado.GetNombre());
