@@ -2,9 +2,13 @@
 from Entidades import Conductores
 from Entidades import Vehiculos
 from Entidades import Tipo_Envio
+from Entidades import Usuarios
 from Repositorios import ConductoresRepositorio
 from Repositorios import VehiculosRepositorio
 from Repositorios import TipoEnvioRepositorio
+from Repositorios import UsuariosRepositorio
+
+from datetime import datetime
 
 #Definicion metodo Main
 def main():
@@ -126,11 +130,59 @@ def main():
 
    #Consultar
    #Creo Objeto envio
-   tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
+   #tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
    #Creo objeto de repositorio envio
-   repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
+   #repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
    #Utilizo metodo guardar que me recibe el objeto envio
-   repositorio.Consultar(tipoenvio)
+   #repositorio.Consultar(tipoenvio)
+
+
+   #--USUARIOS
+
+    #Inicializacion de datos
+   id=2
+   nombre="Jorge luis parra garcia"
+   email="jorge123@gmail.com"
+   telefono="3014784269"
+   direccion="Calle 39 "
+   rol="Administrador"
+   fechaRegistro=datetime(2025, 4, 10, 16, 30, 0) 
+   
+   #Insertar
+   #Creo Objeto usuario
+   #usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
+   #Creo objeto de repositorio usuario
+   #repositorio = UsuariosRepositorio.UsuariosRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto usuario
+   #repositorio.Guardar(usuario)
+
+
+   #Actualizar
+   #Creo Objeto usuario
+   #usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
+   #Creo objeto de repositorio usuario
+   #repositorio = UsuariosRepositorio.UsuariosRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto usuario
+   #repositorio.Actualizar(usuario)
+
+   #Eliminar
+   #Creo Objeto usuario
+   #usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
+   #Creo objeto de repositorio usuario
+   #repositorio = UsuariosRepositorio.UsuariosRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto usuario
+   #repositorio.Eliminar(usuario)
+
+   #Consultar
+   #Creo Objeto usuario
+   usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
+   #Creo objeto de repositorio usuario
+   repositorio = UsuariosRepositorio.UsuariosRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto usuario
+   repositorio.Consultar(usuario)
+
+
+
 
 
 #Llamado metodo Main
