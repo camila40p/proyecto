@@ -16,13 +16,20 @@ class Conexion:
 
     #Crear cursor para interacturar con la BD    
     def conectar(self):
-        self.__ObjCursor=self.__Conexion.cursor();
+        self.__ObjCursor=self.__Conexion.cursor()
     
     #Cerrar cursor 
     def desconectar(self):
-        self.__ObjCursor.close();
+        self.__ObjCursor.close()
 
-    #Operacion que no devuelve tabla
+    #Operacion que no devuelve tabla (Insertar,Actualizar,Eliminar)
     def ejecutarNoQuery(self,consultaSQL): #Ejecuto sonsulta
         self.__ObjCursor.execute(consultaSQL); #Ejecuto consulta
         self.__ObjCursor.commit(); #Guardo en BD
+
+    #Operacion que devuelve tabla (Consulta)
+    def ejecutarQuery(self,consultaSQL):
+        tabla=self.__ObjCursor.execute(consultaSQL); #Ejecuto consulta
+        self.__ObjCursor.commit(); #Guardo en BD
+        return tabla;
+
