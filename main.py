@@ -3,10 +3,14 @@ from Entidades import Conductores
 from Entidades import Vehiculos
 from Entidades import Tipo_Envio
 from Entidades import Usuarios
+from Entidades import Incidencias
+
+
 from Repositorios import ConductoresRepositorio
 from Repositorios import VehiculosRepositorio
 from Repositorios import TipoEnvioRepositorio
 from Repositorios import UsuariosRepositorio
+from Repositorios import IncidenciasRepositorio
 
 from datetime import datetime
 
@@ -175,13 +179,52 @@ def main():
 
    #Consultar
    #Creo Objeto usuario
-   usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
+   #usuario = Usuarios.Usuarios(id,nombre,email,telefono,direccion,rol,fechaRegistro)
    #Creo objeto de repositorio usuario
-   repositorio = UsuariosRepositorio.UsuariosRepositorio()
+   #repositorio = UsuariosRepositorio.UsuariosRepositorio()
    #Utilizo metodo guardar que me recibe el objeto usuario
-   repositorio.Consultar(usuario)
+   #repositorio.Consultar(usuario)
 
+   #--INCIDENCIAS
 
+    #Inicializacion de datos
+   id=2
+   pedidoID="3"
+   descripcion="paquete mal mal envuelto por usuario"
+   fecha=datetime(2025, 4, 10, 16, 30, 30) 
+   resuelta=0
+   
+   #Insertar
+   #Creo Objeto incidencia
+   #incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
+   #Creo objeto de repositorio incidencia
+   #repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto incidencia
+   #repositorio.Guardar(incidencia)
+
+   #Actualizar
+   #Creo Objeto incidencia
+   #incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
+   #Creo objeto de repositorio incidencia
+   #repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto incidencia
+   #repositorio.Actualizar(incidencia)
+
+   #Eliminar
+   #Creo Objeto incidencia
+   #incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
+   #Creo objeto de repositorio incidencia
+   #repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto incidencia
+   #repositorio.Eliminar(incidencia)
+
+   #Consultar
+   #Creo Objeto usuario
+   incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
+   #Creo objeto de repositorio usuario
+   repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto usuario
+   repositorio.Consultar(incidencia)
 
 
 
