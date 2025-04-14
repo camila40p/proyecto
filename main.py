@@ -1,8 +1,10 @@
 #Improtar clases de otras carpetas del proyecto
 from Entidades import Conductores
 from Entidades import Vehiculos
+from Entidades import Tipo_Envio
 from Repositorios import ConductoresRepositorio
 from Repositorios import VehiculosRepositorio
+from Repositorios import TipoEnvioRepositorio
 
 #Definicion metodo Main
 def main():
@@ -58,36 +60,77 @@ def main():
    #Insertar
    #Creo Objeto vehiculo
    #vehiculo = Vehiculos.Vehiculos(id,placa,tipo,capacidad)
-   #Creo objeto de repositorio conductores 
+   #Creo objeto de repositorio vehiculo
    #repositorio = VehiculosRepositorio.VehiculosRepositorio()
-   #Utilizo metodo guardar que me recibe el objeto conductor
+   #Utilizo metodo guardar que me recibe el objeto vehiculo
    #repositorio.Guardar(vehiculo)
 
 
    #Actualizar
    #Creo Objeto vehiculo
    #vehiculo = Vehiculos.Vehiculos(id,placa,tipo,capacidad)
-   #Creo objeto de repositorio conductores 
+   #Creo objeto de repositorio vehiculo
    #repositorio = VehiculosRepositorio.VehiculosRepositorio()
-   #Utilizo metodo guardar que me recibe el objeto conductor
+   #Utilizo metodo guardar que me recibe el objeto vehiculo
    #repositorio.Actualizar(vehiculo)
 
 
    #Eliminar
    #Creo Objeto vehiculo
    #vehiculo = Vehiculos.Vehiculos(id,placa,tipo,capacidad)
-   #Creo objeto de repositorio conductores 
+   #Creo objeto de repositorio vehiculo
    #repositorio = VehiculosRepositorio.VehiculosRepositorio()
-   #Utilizo metodo guardar que me recibe el objeto conductor
+   #Utilizo metodo guardar que me recibe el objeto vehiculo
    #repositorio.Eliminar(vehiculo)
 
    #Consultar
    #Creo Objeto vehiculo
    #vehiculo = Vehiculos.Vehiculos(id,placa,tipo,capacidad)
-   #Creo objeto de repositorio conductores 
+   #Creo objeto de repositorio vehiculo
    #repositorio = VehiculosRepositorio.VehiculosRepositorio()
-   #Utilizo metodo guardar que me recibe el objeto conductor
+   #Utilizo metodo guardar que me recibe el objeto vehiculo
    #repositorio.Consultar(vehiculo)
+
+
+   #--TIPO ENVIO
+
+    #Inicializacion de datos
+   id=2
+   nombre="Delicado2"
+
+   #Insertar
+   #Creo Objeto envio
+   #tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
+   #Creo objeto de repositorio tipo envio 
+   #repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto envio
+   #repositorio.Guardar(tipoenvio)
+
+
+   #Actualizar
+   #Creo Objeto envio
+   #tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
+   #Creo objeto de repositorio envio
+   #repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto envio
+   #repositorio.Actualizar(tipoenvio)
+
+
+   #Eliminar
+   #Creo Objeto envio
+   #tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
+   #Creo objeto de repositorio envio
+   #repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto envio
+   #repositorio.Eliminar(tipoenvio)
+
+   #Consultar
+   #Creo Objeto envio
+   tipoenvio = Tipo_Envio.Tipo_Envio(id,nombre)
+   #Creo objeto de repositorio envio
+   repositorio = TipoEnvioRepositorio.TipoEnvioRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto envio
+   repositorio.Consultar(tipoenvio)
 
 
 #Llamado metodo Main
