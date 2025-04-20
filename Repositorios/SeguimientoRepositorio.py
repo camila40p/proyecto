@@ -43,6 +43,6 @@ class SeguimientoRepositorio:
         consulta = f"""SELECT * FROM seguimiento  WHERE id={Seguimiento.getIdPedido()}"""
         tabla=ObjConexion.ejecutarQuery(consulta)
         print("Dato Consultado")
-        print(tabulate(tabla, headers=["d","pedido_id","estado_id","ubicacion","comentario","fecha_hora"], tablefmt="grid"))
+        print(tabulate(tabla, headers=["id","pedido_id","estado_id","ubicacion","comentario","fecha_hora"], tablefmt="grid"))
         ObjConexion.desconectar()
         return True

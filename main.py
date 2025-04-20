@@ -8,7 +8,7 @@ from Entidades import MetodosPago
 from Entidades import Pagos
 from Entidades import Ciudades
 from Entidades import Seguimiento
-#from Entidades import Estados
+from Entidades import Estados
 
 
 
@@ -22,7 +22,7 @@ from Repositorios import MetodosPagoRepositorio
 from Repositorios import PagosRepositorio
 from Repositorios import CiudadesRepositorio
 from Repositorios import SeguimientoRepositorio
-#from Repositorios import EstadosRepositorio
+from Repositorios import EstadosRepositorio
 
 from datetime import datetime
 
@@ -376,15 +376,15 @@ def main():
    #repositorio.Eliminar(seguimiento)
 
    #Consultar
-   seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
-   repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
-   repositorio.Consultar(seguimiento)
+   #seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
+   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   #repositorio.Consultar(seguimiento)
 
    #--ESTADOS
 
    #Inicializacion de datos
-   id = 4
-   nombre = "cancelado"
+   id = 1
+   nombre = "Pendiente"
 
    #Insertar
    #estado = Estados.Estados(id, nombre)
