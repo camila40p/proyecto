@@ -4,6 +4,13 @@ from Entidades import Vehiculos
 from Entidades import Tipo_Envio
 from Entidades import Usuarios
 from Entidades import Incidencias
+from Entidades import MetodosPago
+from Entidades import Pagos
+from Entidades import Ciudades
+from Entidades import Seguimiento
+from Entidades import Estados
+
+
 
 
 from Repositorios import ConductoresRepositorio
@@ -11,6 +18,11 @@ from Repositorios import VehiculosRepositorio
 from Repositorios import TipoEnvioRepositorio
 from Repositorios import UsuariosRepositorio
 from Repositorios import IncidenciasRepositorio
+from Repositorios import MetodosPagoRepositorio
+from Repositorios import PagosRepositorio
+from Repositorios import CiudadesRepositorio
+from Repositorios import SeguimientoRepositorio
+from Repositorios import EstadosRepositorio
 
 from datetime import datetime
 
@@ -226,6 +238,175 @@ def main():
    #Utilizo metodo guardar que me recibe el objeto usuario
    repositorio.Consultar(incidencia)
 
+
+   #--METODO DE PAGO
+
+   #Inicializacion de datos
+   id = 1
+   nombre = "Tarjeta de debito"
+
+   #Insertar
+   #Creo Objeto metodo de pago
+   #metodo = MetodosPago.MetodosPago(id, nombre)
+   #Creo objeto de repositorio metodo de pago 
+   #repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto metodo de pago
+   #repositorio.Guardar(metodo)
+
+   #Actualizar
+   #Creo Objeto metodo de pago
+   #metodo = MetodosPago.MetodosPago(id, nombre)
+   #Creo objeto de repositorio metodo de pago 
+   #repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
+   #Utilizo metodo actualizar que me recibe el objeto metodo de pago
+   #repositorio.Actualizar(metodo)
+
+   #Eliminar
+   #Creo Objeto metodo de pago
+   #metodo = MetodosPago.MetodosPago(id, nombre)
+   #Creo objeto de repositorio metodo de pago 
+   #repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
+   #Utilizo metodo eliminar que me recibe el objeto metodo de pago
+   #repositorio.Eliminar(metodo)
+
+   #Consultar
+   #Creo Objeto metodo de pago
+   metodo = MetodosPago.MetodosPago(id, nombre)
+   #Creo objeto de repositorio metodo de pago 
+   repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
+   #Utilizo metodo consultar que me recibe el objeto metodo de pago
+   repositorio.Consultar(metodo)
+
+   #--PAGOS
+
+   #Inicializacion de datos
+   #id = 2
+   #pedido_id = 2
+   #metodo_pago_id= 2
+   #valor = 50000
+   #fecha_pago = datetime(2025, 4, 14, 12, 30)
+   #estado_pago = "pagado"
+
+
+
+   #Insertar
+   #Creo Objeto pago
+   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   #Creo objeto de repositorio pago 
+   #repositorio = PagosRepositorio.PagosRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto pago
+   #repositorio.Guardar(pago)
+
+   #Actualizar
+   #Creo Objeto pago
+   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   #Creo objeto de repositorio pago 
+   #repositorio = PagosRepositorio.PagosRepositorio()
+   #Utilizo metodo actualizar que me recibe el objeto pago
+   #repositorio.Actualizar(pago)
+
+   #Eliminar
+   #Creo Objeto pago
+   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   #Creo objeto de repositorio pago 
+   #repositorio = PagosRepositorio.PagosRepositorio()
+   #Utilizo metodo eliminar que me recibe el objeto pago
+   #repositorio.Eliminar(pago)
+
+   #Consultar
+   #Creo Objeto pago
+   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   #Creo objeto de repositorio pago 
+   #repositorio = PagosRepositorio.PagosRepositorio()
+   #Utilizo metodo consultar que me recibe el objeto pago
+   #repositorio.Consultar(pago)
+
+   #--CIUDAD
+
+   #Inicializacion de datos
+   #id = 4
+   #nombre = "Itagui"
+   #departamento_id= "1"
+
+   #Insertar
+   #Creo Objeto ciudad
+   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   #Creo objeto de repositorio ciudad 
+   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   #Utilizo metodo guardar que me recibe el objeto ciudad
+   #repositorio.Guardar(ciudad)
+
+   #Actualizar
+   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   #repositorio.Actualizar(ciudad)
+
+   #Eliminar
+   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   #repositorio.Eliminar(ciudad)
+
+   #Consultar
+   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   #repositorio.Consultar(ciudad)
+
+
+   #--SEGUIMIENTO
+
+   #Inicializacion de datos
+   #id = 4
+   #pedido_id = 3
+   #estado_id = 3
+   #ubicacion = "Bodega Medellín"
+   comentario = "Pedido empaquetado"
+   fecha_hora= datetime(2025, 4, 14, 17, 0)
+
+   #Insertar
+   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   #repositorio.Guardar(seguimiento)
+
+   #Actualizar
+   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   #repositorio.Actualizar(seguimiento)
+
+   #Eliminar
+   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   #repositorio.Eliminar(seguimiento)
+
+   #Consultar
+   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   #repositorio.Consultar(seguimiento)
+
+   #--ESTADOS
+
+   #Inicializacion de datos
+   id = 4
+   nombre = "cancelado"
+
+   #Insertar
+   #estado = Estados.Estados(id, nombre)
+   #repositorio = EstadosRepositorio.EstadosRepositorio()
+   #repositorio.Guardar(estado)
+
+   #Actualizar
+   #estado = Estados.Estados(id, nombre)
+   #repositorio = EstadosRepositorio.EstadosRepositorio()
+   #repositorio.Actualizar(estado)
+
+   #Eliminar
+   #estado = Estados.Estados(id, nombre)
+   #repositorio = EstadosRepositorio.EstadosRepositorio()
+   #repositorio.Eliminar(estado)
+
+   #Consultar
+   #estado = Estados.Estados(id, nombre)
+   #repositorio = EstadosRepositorio.EstadosRepositorio()
+   #repositorio.Consultar(estado)
 
 
 #Llamado metodo Main
