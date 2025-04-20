@@ -11,6 +11,8 @@ from Entidades import Seguimiento
 from Entidades import Estados
 from Entidades import Pedido
 from Entidades import Rutas
+from Entidades import Zonas
+from Entidades import Departamento
 
 
 
@@ -27,6 +29,8 @@ from Repositorios import SeguimientoRepositorio
 from Repositorios import EstadosRepositorio
 from Repositorios import PedidosRepositorio
 from Repositorios import RutasRepositorio
+from Repositorios import ZonasRepositorio
+from Repositorios import DepartamentoRepositorio
 
 from datetime import datetime
 
@@ -481,7 +485,37 @@ def main():
    #Repositorio = RutasRepositorio.RutasRepositorio()
    #Repositorio.Consultar(ruta)
  
+#Zonas
 
+   #Inicializacion de datos
+   id=4
+   nombre='Cafeteras'
+
+   #Insertar
+   #zona = Zonas.Zona(id, nombre)
+   #Repositorio = ZonasRepositorio.ZonasRepositorio()
+   #Repositorio.Guardar(zona)
+
+   #Actualizar
+   
+   #zona = Zonas.Zona(id, nombre)
+   #Repositorio = ZonasRepositorio.ZonasRepositorio()
+   #Repositorio.Actualizar(zona)
+  
+   
+
+   #Eliminar
+   #zona = Zonas.Zona(id, nombre)
+   #Repositorio = ZonasRepositorio.ZonasRepositorio()
+   #Repositorio.Eliminar(zona)
+   
+
+   #Consultar
+   #zona = Zonas.Zona(id, nombre)
+   #Repositorio = ZonasRepositorio.ZonasRepositorio()
+   #Repositorio.Consultar(zona)
+  
+ 
 
 #Llamado metodo Main
 if __name__ == "__main__":
