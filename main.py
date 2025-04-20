@@ -9,6 +9,7 @@ from Entidades import Pagos
 from Entidades import Ciudades
 from Entidades import Seguimiento
 from Entidades import Estados
+from Entidades import Pedido
 
 
 
@@ -23,6 +24,7 @@ from Repositorios import PagosRepositorio
 from Repositorios import CiudadesRepositorio
 from Repositorios import SeguimientoRepositorio
 from Repositorios import EstadosRepositorio
+from Repositorios import PedidosRepositorio
 
 from datetime import datetime
 
@@ -405,6 +407,44 @@ def main():
    #estado = Estados.Estados(id, nombre)
    #repositorio = EstadosRepositorio.EstadosRepositorio()
    #repositorio.Consultar(estado)
+
+
+ # PEDIDOS
+
+   #Inicializacion de datos
+   id=1
+   codigo='PED004'
+   usuario_id=3
+   destinatario='Jorge antonio parra'
+   direccion_entrega='Avenida 45 #67-89'
+   ciudad_id=3
+   ruta_id=3
+   vehiculo_id=3
+   conductor_id=3
+   tipo_envio_id=3
+   estado_actual=3
+   fecha_creacion=datetime(2025, 4, 8, 6, 57)
+
+   #Insertar
+   #pedido = Pedido.Pedido( id, codigo, usuario_id, destinatario, direccion_entrega, ciudad_id,ruta_id, vehiculo_id, conductor_id, tipo_envio_id, estado_actual, fecha_creacion)
+   #Repositorio = PedidosRepositorio.PedidosRepositorio()
+   #Repositorio.Guardar(pedido)
+
+   #Actualizar
+   #pedido = Pedido.Pedido( id, codigo, usuario_id, destinatario, direccion_entrega, ciudad_id,ruta_id, vehiculo_id, conductor_id, tipo_envio_id, estado_actual, fecha_creacion)
+   #Repositorio = PedidosRepositorio.PedidosRepositorio()
+   #Repositorio.Actualizar(pedido)
+
+   #Eliminar
+   #pedido = Pedido.Pedido( id, codigo, usuario_id, destinatario, direccion_entrega, ciudad_id,ruta_id, vehiculo_id, conductor_id, tipo_envio_id, estado_actual, fecha_creacion)
+   #Repositorio = PedidosRepositorio.PedidosRepositorio()
+   #Repositorio.Eliminar(pedido)
+
+   #Consultar
+   #pedido = Pedido.Pedido( id, codigo, usuario_id, destinatario, direccion_entrega, ciudad_id,ruta_id, vehiculo_id, conductor_id, tipo_envio_id, estado_actual, fecha_creacion)
+   #Repositorio = PedidosRepositorio.PedidosRepositorio()
+   #Repositorio.Consultar(pedido)
+
 
 
 #Llamado metodo Main
