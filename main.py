@@ -10,6 +10,7 @@ from Entidades import Ciudades
 from Entidades import Seguimiento
 from Entidades import Estados
 from Entidades import Pedido
+from Entidades import Rutas
 
 
 
@@ -25,6 +26,7 @@ from Repositorios import CiudadesRepositorio
 from Repositorios import SeguimientoRepositorio
 from Repositorios import EstadosRepositorio
 from Repositorios import PedidosRepositorio
+from Repositorios import RutasRepositorio
 
 from datetime import datetime
 
@@ -445,6 +447,40 @@ def main():
    #Repositorio = PedidosRepositorio.PedidosRepositorio()
    #Repositorio.Consultar(pedido)
 
+
+
+
+#Rutas
+
+   #Inicializacion de datos
+   id=4
+   ciudad_origen_id=2
+   ciudad_destino_id=3
+   zona_id=2
+
+   #Insertar
+   #ruta = Rutas.Ruta(id, ciudad_origen_id, ciudad_destino_id, zona_id)
+   #Repositorio = RutasRepositorio.RutasRepositorio()
+   #Repositorio.Guardar(ruta)
+
+   #Actualizar
+   
+   #ruta = Rutas.Ruta(id, ciudad_origen_id, ciudad_destino_id, zona_id)
+   #Repositorio = RutasRepositorio.RutasRepositorio()
+   #Repositorio.Actualizar(ruta)
+   
+
+   #Eliminar
+   #ruta = Rutas.Ruta(id, ciudad_origen_id, ciudad_destino_id, zona_id)
+   #Repositorio = RutasRepositorio.RutasRepositorio()
+   #Repositorio.Eliminar(ruta)
+   
+
+   #Consultar
+   #ruta = Rutas.Ruta(id, ciudad_origen_id, ciudad_destino_id, zona_id)
+   #Repositorio = RutasRepositorio.RutasRepositorio()
+   #Repositorio.Consultar(ruta)
+ 
 
 
 #Llamado metodo Main
