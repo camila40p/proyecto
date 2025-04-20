@@ -6,6 +6,7 @@ from Entidades import Usuarios
 from Entidades import Incidencias
 from Entidades import MetodosPago
 from Entidades import Pagos
+from Entidades import Ciudades
 #from Entidades import Seguimiento
 #from Entidades import Estados
 
@@ -19,7 +20,7 @@ from Repositorios import UsuariosRepositorio
 from Repositorios import IncidenciasRepositorio
 from Repositorios import MetodosPagoRepositorio
 from Repositorios import PagosRepositorio
-#from Repositorios import CiudadesRepositorio
+from Repositorios import CiudadesRepositorio
 #from Repositorios import SeguimientoRepositorio
 #from Repositorios import EstadosRepositorio
 
@@ -312,18 +313,18 @@ def main():
 
    #Consultar
    #Creo Objeto pago
-   pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
    #Creo objeto de repositorio pago 
-   repositorio = PagosRepositorio.PagosRepositorio()
+   #repositorio = PagosRepositorio.PagosRepositorio()
    #Utilizo metodo consultar que me recibe el objeto pago
-   repositorio.Consultar(pago)
+   #repositorio.Consultar(pago)
 
    #--CIUDAD
 
    #Inicializacion de datos
-   #id = 4
-   #nombre = "Itagui"
-   #departamento_id= "1"
+   id = 1
+   nombre = "Medellín"
+   departamento_id= 1
 
    #Insertar
    #Creo Objeto ciudad
@@ -344,9 +345,9 @@ def main():
    #repositorio.Eliminar(ciudad)
 
    #Consultar
-   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
-   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
-   #repositorio.Consultar(ciudad)
+   ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   repositorio.Consultar(ciudad)
 
 
    #--SEGUIMIENTO
