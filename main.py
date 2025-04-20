@@ -6,9 +6,8 @@ from Entidades import Usuarios
 from Entidades import Incidencias
 from Entidades import MetodosPago
 from Entidades import Pagos
-from Entidades import Ciudades
-from Entidades import Seguimiento
-from Entidades import Estados
+#from Entidades import Seguimiento
+#from Entidades import Estados
 
 
 
@@ -20,9 +19,9 @@ from Repositorios import UsuariosRepositorio
 from Repositorios import IncidenciasRepositorio
 from Repositorios import MetodosPagoRepositorio
 from Repositorios import PagosRepositorio
-from Repositorios import CiudadesRepositorio
-from Repositorios import SeguimientoRepositorio
-from Repositorios import EstadosRepositorio
+#from Repositorios import CiudadesRepositorio
+#from Repositorios import SeguimientoRepositorio
+#from Repositorios import EstadosRepositorio
 
 from datetime import datetime
 
@@ -232,11 +231,11 @@ def main():
 
    #Consultar
    #Creo Objeto usuario
-   incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
+   #incidencia = Incidencias.Incidencias(id,pedidoID,descripcion,fecha,resuelta)
    #Creo objeto de repositorio usuario
-   repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
+   #repositorio = IncidenciasRepositorio.IncidenciasRepositorio()
    #Utilizo metodo guardar que me recibe el objeto usuario
-   repositorio.Consultar(incidencia)
+   #repositorio.Consultar(incidencia)
 
 
    #--METODO DE PAGO
@@ -271,23 +270,21 @@ def main():
 
    #Consultar
    #Creo Objeto metodo de pago
-   metodo = MetodosPago.MetodosPago(id, nombre)
+   #metodo = MetodosPago.MetodosPago(id, nombre)
    #Creo objeto de repositorio metodo de pago 
-   repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
+   #repositorio = MetodosPagoRepositorio.MetodosPagoRepositorio()
    #Utilizo metodo consultar que me recibe el objeto metodo de pago
-   repositorio.Consultar(metodo)
+   #repositorio.Consultar(metodo)
 
    #--PAGOS
 
    #Inicializacion de datos
-   #id = 2
-   #pedido_id = 2
-   #metodo_pago_id= 2
-   #valor = 50000
-   #fecha_pago = datetime(2025, 4, 14, 12, 30)
-   #estado_pago = "pagado"
-
-
+   id = 3
+   pedido_id = 3
+   metodo_pago_id= 3
+   valor = 350000.00
+   fecha_pago = datetime(2025, 4, 8, 6, 57)
+   estado_pago = "pagado"
 
    #Insertar
    #Creo Objeto pago
@@ -315,11 +312,11 @@ def main():
 
    #Consultar
    #Creo Objeto pago
-   #pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
+   pago = Pagos.Pagos(id, pedido_id, metodo_pago_id, valor, fecha_pago, estado_pago)
    #Creo objeto de repositorio pago 
-   #repositorio = PagosRepositorio.PagosRepositorio()
+   repositorio = PagosRepositorio.PagosRepositorio()
    #Utilizo metodo consultar que me recibe el objeto pago
-   #repositorio.Consultar(pago)
+   repositorio.Consultar(pago)
 
    #--CIUDAD
 

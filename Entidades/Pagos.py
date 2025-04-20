@@ -6,11 +6,11 @@ class Pagos:
     #Metodo constructor con parametros
     def __init__(self,id,pedido_id,metodo_pago_id,valor,fecha_pago,estado_pago):
         self.setId(id)
-        self.setPedido(pedido_id)
-        self.setDescripcion(metodo_pago_id)
-        self.setFecha(valor)
-        self.setResuelta(fecha_pago)
-        self.setResuelta(estado_pago)
+        self.setPedidoId(pedido_id)
+        self.setMetodoPagoId(metodo_pago_id)
+        self.setValor(valor)
+        self.setFechaPago(fecha_pago)
+        self.setEstadoPago(estado_pago)
 
     #Metodos Get y Set para acceder a los atributos
 

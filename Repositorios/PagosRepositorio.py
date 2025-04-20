@@ -9,7 +9,7 @@ class PagosRepositorio:
     def Guardar(self, Pagos):
         ObjConexion = Conexion.Conexion()
         ObjConexion.conectar()
-        consulta = f"""INSERT INTO pagos (id,pedido_id,metodo_pago_id,valor,fecha_pago,estado_pago) VALUES ({Pagos.getId()},'{Pagos.getPedidoId()}','{Pagos.getMetodoPagoId()}','{Pagos.getValor()}','{Pagos.getFechaPago()}',{Pagos.getEstadoPago()},')"""
+        consulta = f"""INSERT INTO pagos (id,pedido_id,metodo_pago_id,valor,fecha_pago,estado_pago) VALUES ({Pagos.getId()},{Pagos.getPedidoId()} ,{Pagos.getMetodoPagoId()} ,'{Pagos.getValor()}','{Pagos.getFechaPago()}','{Pagos.getEstadoPago()}')"""
         ObjConexion.ejecutarNoQuery(consulta)
         ObjConexion.desconectar()
         print("Dato Insertado")
@@ -20,7 +20,7 @@ class PagosRepositorio:
     def Actualizar(self, Pagos):
         ObjConexion = Conexion.Conexion()
         ObjConexion.conectar()
-        consulta = f"""UPDATE pagos SET id='{Pagos.getId()}',pedido_id='{Pagos.getPedidoId()}',metodo_pago_id='{Pagos.getMetodoPagoId()}',valor='{Pagos.getValor()}',fecha_pago='{Pagos.getFechaPago()}',estado_pago='{Pagos.getEstadoPago()}', Where id= {Pagos.getId()}"""
+        consulta = f"""UPDATE pagos SET id={Pagos.getId()} ,pedido_id={Pagos.getPedidoId()},metodo_pago_id={Pagos.getMetodoPagoId()},valor='{Pagos.getValor()}',fecha_pago='{Pagos.getFechaPago()}',estado_pago='{Pagos.getEstadoPago()}' Where id= {Pagos.getId()}"""
         ObjConexion.ejecutarNoQuery(consulta)
         ObjConexion.desconectar()
         print("Dato Actualizado")
