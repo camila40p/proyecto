@@ -516,7 +516,35 @@ def main():
    #Repositorio.Consultar(zona)
   
  
+#Departamento
 
+   #Inicializacion de datos
+   id=4
+   nombre='Amazonas'
+
+   #Insertar
+   #departamento = Departamento.Departamento(id, nombre)
+   #Repositorio = DepartamentoRepositorio.DepartamentosRepositorio()
+   #Repositorio.Guardar(departamento)
+
+   #Actualizar
+   
+   #departamento = Departamento.Departamento(id, nombre)
+   #Repositorio = DepartamentoRepositorio.DepartamentosRepositorio()
+   #Repositorio.Actualizar(departamento)
+
+
+   #Eliminar
+   #departamento = Departamento.Departamento(id, nombre)
+   #Repositorio = DepartamentoRepositorio.DepartamentosRepositorio()
+   #Repositorio.Eliminar(departamento)
+
+   
+   #Consultar
+   #departamento = Departamento.Departamento(id, nombre)
+   #Repositorio = DepartamentoRepositorio.DepartamentosRepositorio()
+   #Repositorio.Consultar(departamento)
+  
 #Llamado metodo Main
-if __name__ == "__main__":
+if __name__ == "__main__":#
     main()
