@@ -7,7 +7,7 @@ from Entidades import Incidencias
 from Entidades import MetodosPago
 from Entidades import Pagos
 from Entidades import Ciudades
-#from Entidades import Seguimiento
+from Entidades import Seguimiento
 #from Entidades import Estados
 
 
@@ -21,7 +21,7 @@ from Repositorios import IncidenciasRepositorio
 from Repositorios import MetodosPagoRepositorio
 from Repositorios import PagosRepositorio
 from Repositorios import CiudadesRepositorio
-#from Repositorios import SeguimientoRepositorio
+from Repositorios import SeguimientoRepositorio
 #from Repositorios import EstadosRepositorio
 
 from datetime import datetime
@@ -345,40 +345,40 @@ def main():
    #repositorio.Eliminar(ciudad)
 
    #Consultar
-   ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
-   repositorio = CiudadesRepositorio.CiudadesRepositorio()
-   repositorio.Consultar(ciudad)
+   #ciudad = Ciudades.Ciudades(id, nombre, departamento_id)
+   #repositorio = CiudadesRepositorio.CiudadesRepositorio()
+   #repositorio.Consultar(ciudad)
 
 
    #--SEGUIMIENTO
 
    #Inicializacion de datos
-   #id = 4
-   #pedido_id = 3
-   #estado_id = 3
-   #ubicacion = "Bodega Medellín"
-   comentario = "Pedido empaquetado"
-   fecha_hora= datetime(2025, 4, 14, 17, 0)
+   id = 3
+   idpedido = 3
+   estadoid = 3
+   ubicacion = "Entregado"
+   comentario = "Sin inconvenientes"
+   fechahora= datetime(2025, 4, 8, 6, 57)
 
    #Insertar
-   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
    #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
    #repositorio.Guardar(seguimiento)
 
    #Actualizar
-   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
    #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
    #repositorio.Actualizar(seguimiento)
 
    #Eliminar
-   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
+   #seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
    #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
    #repositorio.Eliminar(seguimiento)
 
    #Consultar
-   #seguimiento = Seguimiento.Seguimiento(id, pedido_id, estado_id, ubicacion, comentario, fecha_hora)
-   #repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
-   #repositorio.Consultar(seguimiento)
+   seguimiento = Seguimiento.Seguimiento(id, idpedido, estadoid, ubicacion, comentario, fechahora)
+   repositorio = SeguimientoRepositorio.SeguimientoRepositorio()
+   repositorio.Consultar(seguimiento)
 
    #--ESTADOS
 
